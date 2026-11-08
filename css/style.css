@@ -1,7 +1,14 @@
+html {
+    background-color: #e4e4e4; /* Pone un fondo gris fuera del currículum */
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    margin: 0;
+    max-width: 1100px; /* Tamaño máximo del currículum */
+    margin: 40px auto; /* Esto centra la web y deja los márgenes a los lados */
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3); /* Le da sombra para que parezca un folio real */
+    background-color: white;
 }
 
 .columna-izquierda {
