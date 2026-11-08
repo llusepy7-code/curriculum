@@ -5,32 +5,62 @@ body {
 }
 
 .columna-izquierda {
-    background-color: #0b203a; /* Azul oscuro */
+    background-color: #0c1c33;
     color: white;
     width: 30%;
-    padding: 50px 20px;
+    padding: 40px 30px;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra la foto y los títulos */
-    text-align: center;
 }
 
 .columna-derecha {
     width: 70%;
-    padding: 60px 80px; /* Da más espacio y lo centra mejor */
+    padding: 50px 70px;
+    background-color: white;
+    color: #111;
 }
 
 img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%; /* Hace la foto redonda */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
-    border: 3px solid white; /* Borde blanco para la foto */
+    display: block;
+    margin: 0 auto 30px auto;
 }
 
-ul {
-    text-align: left; /* Deja los puntos de las listas bien ordenados */
-    line-height: 1.8; /* Separa un poco el texto para leerlo mejor */
+h1 {
+    color: #0c1c33;
+    font-size: 38px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.titulo-azul {
+    color: #3b5998;
+    margin-bottom: 5px;
+}
+
+/* Líneas separadoras de Canva */
+.linea-blanca {
+    border: 0;
+    border-top: 1px solid white;
+    margin: 25px 0;
+}
+
+.linea-negra {
+    border: 0;
+    border-top: 1px solid black;
+    margin: 25px 0;
+}
+
+p {
+    font-size: 14px;
+    margin: 8px 0;
+    line-height: 1.5;
 }
