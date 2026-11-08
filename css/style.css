@@ -1,0 +1,4 @@
+body { font-family: Arial, sans-serif; display: flex; margin: 0; }
+.columna-izquierda { background-color: #0b1f38; color: white; width: 30%; padding: 30px; min-height: 100vh; }
+.columna-derecha { width: 70%; padding: 50px; }
+img { width: 150px; border-radius: 50%; }
