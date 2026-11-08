@@ -8,8 +8,18 @@ body {
     background-color: #0c1c33;
     color: white;
     width: 30%;
-    padding: 40px 30px;
+    padding: 40px 40px;
     min-height: 100vh;
+    text-align: left; /* Pone el texto a la izquierda como en Canva */
+}
+
+.columna-izquierda img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 30px auto; /* Centra SOLO la foto */
 }
 
 .columna-derecha {
@@ -17,15 +27,6 @@ body {
     padding: 50px 70px;
     background-color: white;
     color: #111;
-}
-
-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 30px auto;
 }
 
 h1 {
@@ -46,17 +47,16 @@ h3 {
     margin-bottom: 5px;
 }
 
-/* Líneas separadoras de Canva */
 .linea-blanca {
     border: 0;
     border-top: 1px solid white;
-    margin: 25px 0;
+    margin: 25px 0 15px 0;
 }
 
 .linea-negra {
     border: 0;
-    border-top: 1px solid black;
-    margin: 25px 0;
+    border-top: 1px solid #ccc; /* Línea gris suave como en Canva */
+    margin: 25px 0 15px 0;
 }
 
 p {
