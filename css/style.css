@@ -273,9 +273,10 @@ h1 span {
     gap: 8px;
 }
 
-/* Secciones */
+/* Secciones con espacio arriba al pulsar en el menú */
 .seccion {
     margin-bottom: 58px;
+    scroll-margin-top: 100px;
 }
 
 .seccion-final {
@@ -363,16 +364,18 @@ h1 span {
     border-radius: 9px;
 }
 
-/* Bloque Contacto centrado */
+/* Bloque Contacto centrado en 2x2 */
 .contacto-card {
-    padding: 44px;
-    max-width: 720px;
-    margin: 0 auto;
+    padding: 48px 36px;
 }
 
 .contacto-header {
     text-align: center;
     margin-bottom: 34px;
+}
+
+.contacto-header .eyebrow {
+    margin-bottom: 8px;
 }
 
 .contacto-header h2 {
@@ -387,33 +390,31 @@ h1 span {
 
 .contacto-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    max-width: 480px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 780px;
     margin: 0 auto;
-}
-
-.contacto-lista {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
 }
 
 .contacto-item {
     display: flex;
     align-items: center;
-    gap: 14px;
+    justify-content: center;
+    gap: 12px;
     background: rgba(8, 17, 26, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 15px 18px;
+    padding: 16px 20px;
     border-radius: 12px;
     color: #f1f5f9;
     text-decoration: none;
     font-size: 15px;
-    transition: border-color 0.2s;
+    font-weight: 500;
+    transition: border-color 0.2s, transform 0.2s;
 }
 
 a.contacto-item:hover {
     border-color: #34d399;
+    transform: translateY(-2px);
 }
 
 .footer {
@@ -427,7 +428,8 @@ a.contacto-item:hover {
 @media (max-width: 860px) {
     .hero-grid,
     .grid-2,
-    .grid-3 {
+    .grid-3,
+    .contacto-grid {
         grid-template-columns: 1fr;
     }
     .nav-links {
@@ -437,6 +439,6 @@ a.contacto-item:hover {
         font-size: 40px;
     }
     .contacto-card {
-        padding: 28px 20px;
+        padding: 32px 20px;
     }
 }
