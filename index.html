@@ -3,100 +3,566 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Luis Martin | CV</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Jose Luis Martin | Técnico IT</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+            background: radial-gradient(circle at 15% 10%, #102a36 0%, #081118 45%, #050a0f 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Barra superior */
+        .navbar {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .marca {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-iniciales {
+            background-color: #34d399;
+            color: #050a0f;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 7px 10px;
+            border-radius: 8px;
+        }
+
+        .marca-texto strong {
+            display: block;
+            font-size: 14px;
+            color: #f8fafc;
+        }
+
+        .marca-texto span {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #34d399;
+        }
+
+        /* Contenedor general */
+        .contenedor {
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 35px 24px 70px;
+        }
+
+        /* Tarjetas estilo Bento oscuro */
+        .card {
+            background: rgba(13, 24, 34, 0.85);
+            border: 1px solid rgba(56, 189, 248, 0.14);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        /* Cabecera Hero en 2 columnas */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 0.9fr;
+            gap: 22px;
+            margin-bottom: 55px;
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #34d399;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h1 {
+            font-size: 44px;
+            line-height: 1.1;
+            font-weight: 800;
+            color: #f8fafc;
+            margin-bottom: 16px;
+        }
+
+        h1 span {
+            color: #34d399;
+            display: block;
+        }
+
+        .hero-desc {
+            color: #94a3b8;
+            font-size: 15px;
+            margin-bottom: 24px;
+        }
+
+        .botones {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 26px;
+        }
+
+        .btn {
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.2s;
+        }
+
+        .btn-verde {
+            background-color: #34d399;
+            color: #050a0f;
+        }
+
+        .btn-verde:hover {
+            background-color: #6ee7b7;
+        }
+
+        .btn-oscuro {
+            background-color: rgba(255, 255, 255, 0.04);
+            color: #e2e8f0;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .btn-oscuro:hover {
+            border-color: #34d399;
+            color: #34d399;
+        }
+
+        /* 4 mini tarjetas de resumen */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .stat-box {
+            background: rgba(8, 16, 24, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+
+        .stat-box strong {
+            display: block;
+            font-size: 18px;
+            color: #f8fafc;
+        }
+
+        .stat-box span {
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
+        /* Columna derecha del Hero (Foto + Enfoque) */
+        .foto-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: #13222f;
+        }
+
+        .foto-wrapper img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+        }
+
+        .estado-badge {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            right: 12px;
+            background: rgba(6, 13, 20, 0.88);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 12px;
+            color: #f8fafc;
+        }
+
+        .punto-verde {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #34d399;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+
+        .focus-titulo {
+            font-size: 11px;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: #94a3b8;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+
+        .focus-pill {
+            background: rgba(8, 16, 24, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 8px 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            color: #cbd5e1;
+        }
+
+        /* Secciones */
+        .seccion {
+            margin-bottom: 55px;
+        }
+
+        .seccion h2 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #f8fafc;
+            margin-bottom: 22px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card h3 {
+            font-size: 17px;
+            color: #f8fafc;
+            margin-bottom: 6px;
+        }
+
+        .meta {
+            font-size: 13px;
+            color: #34d399;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .card ul {
+            margin-left: 18px;
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        .card li {
+            margin-bottom: 6px;
+        }
+
+        .badge-estado {
+            display: inline-block;
+            margin-top: 14px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #34d399;
+            background: rgba(52, 211, 153, 0.12);
+            border: 1px solid rgba(52, 211, 153, 0.3);
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        /* Pastillas de Stack Tecnológico */
+        .pills-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .pill {
+            background: rgba(8, 16, 24, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #cbd5e1;
+            font-size: 12px;
+            padding: 6px 11px;
+            border-radius: 8px;
+        }
+
+        /* Responsive móvil */
+        @media (max-width: 820px) {
+            .hero-grid,
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none;
+            }
+            h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <main class="cv-hoja">
-        <!-- Cabecera -->
-        <header class="cabecera">
-            <img src="mifoto1.png" alt="Jose Luis Martin" class="foto">
-            <div class="datos-principales">
-                <h1>Jose Luis Martin</h1>
-                <p class="puesto">Técnico en Sistemas Microinformáticos y Redes</p>
-                <p class="resumen">Estudiante de 2º de SMR con perfil resolutivo, enfocado en administración de sistemas, redes y mantenimiento de hardware.</p>
-                <ul class="contacto-lista">
-                    <li><strong>Correo:</strong> llusepy7@gmail.com</li>
-                    <li><strong>Teléfono:</strong> 619 11 08 81</li>
-                    <li><strong>Ubicación:</strong> Valencia, España</li>
-                    <li><strong>GitHub:</strong> github.com/llusepy7-code</li>
-                </ul>
-            </div>
-        </header>
 
-        <!-- Experiencia Práctica -->
-        <section class="bloque">
-            <h2>Experiencia Práctica</h2>
-            <article class="item">
-                <div class="item-cabecera">
-                    <h3>Prácticas Académicas - Técnico en Microinformática</h3>
-                    <span>Mayo 2026 - Junio 2026 (100h)</span>
+    <nav class="navbar">
+        <div class="marca">
+            <div class="logo-iniciales">JL</div>
+            <div class="marca-texto">
+                <strong>Jose Luis Martin</strong>
+                <span>Técnico SMR · Infraestructura IT</span>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#perfil">Perfil</a>
+            <a href="#experiencia">Experiencia</a>
+            <a href="#formacion">Formación</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#stack">Stack</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <main class="contenedor">
+
+        <!-- HERO -->
+        <section class="hero-grid">
+            <div class="card">
+                <span class="eyebrow">Técnico en Sistemas Microinformáticos y Redes</span>
+                <h1>Jose Luis <span>Martin</span></h1>
+                <p class="hero-desc">
+                    Estudiante de 2º de SMR en Valencia con experiencia práctica en soporte técnico, administración de entornos Linux y Windows, redes locales y mantenimiento de hardware.
+                </p>
+                <div class="botones">
+                    <a href="mailto:llusepy7@gmail.com" class="btn btn-verde">✉️ Contactar</a>
+                    <a href="#experiencia" class="btn btn-oscuro">💼 Experiencia</a>
+                    <a href="https://github.com/llusepy7-code" target="_blank" class="btn btn-oscuro">🔗 GitHub</a>
                 </div>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <strong>100h</strong>
+                        <span>Prácticas técnicas IT</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>2º SMR</strong>
+                        <span>Sistemas y Redes</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>Win / Linux</strong>
+                        <span>Administración de sistemas</span>
+                    </div>
+                    <div class="stat-box">
+                        <strong>Redes & HW</strong>
+                        <span>DHCP, cableado y montaje</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="foto-wrapper">
+                    <img src="mifoto1.png" alt="Jose Luis Martin">
+                    <div class="estado-badge">
+                        <span class="punto-verde"></span><strong>Disponible para trabajar</strong><br>
+                        <span style="color:#94a3b8; font-size:11px;">Valencia, España · Soporte e IT</span>
+                    </div>
+                </div>
+                <span class="focus-titulo">Enfoque Actual</span>
+                <div class="focus-grid">
+                    <div class="focus-pill">🐧 Admin. Linux</div>
+                    <div class="focus-pill">🌐 Redes y DHCP</div>
+                    <div class="focus-pill">📦 Virtualización</div>
+                    <div class="focus-pill">🛠️ Soporte y HW</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERFIL PROFESIONAL -->
+        <section id="perfil" class="seccion">
+            <span class="eyebrow">Sobre mí</span>
+            <h2>Perfil Profesional</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Soporte e Infraestructura IT</h3>
+                    <p>Perfil resolutivo orientado a la resolución de incidencias, montaje y mantenimiento preventivo de equipos informáticos, y gestión de usuarios y permisos en Windows Server y Ubuntu.</p>
+                </div>
+                <div class="card">
+                    <h3>Idiomas y Habilidades</h3>
+                    <ul>
+                        <li><strong>Idiomas:</strong> Castellano (Nativo), Valenciano (Nativo), Inglés (Técnico medio).</li>
+                        <li>Trabajo colaborativo y alta atención al detalle.</li>
+                        <li>Adaptabilidad rápida a nuevas herramientas y protocolos.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCIA -->
+        <section id="experiencia" class="seccion">
+            <span class="eyebrow">Trayectoria</span>
+            <h2>Experiencia Práctica</h2>
+            <div class="card">
+                <h3>Prácticas Académicas - Técnico en Microinformática</h3>
+                <span class="meta">Mayo 2026 - Junio 2026 · 100 horas</span>
                 <ul>
                     <li>Soporte técnico y resolución de incidencias.</li>
                     <li>Montaje y mantenimiento de hardware (PCs y periféricos).</li>
                     <li>Digitalización de una biblioteca.</li>
                     <li>Resolución de problemas en Windows y Linux.</li>
                 </ul>
-            </article>
+            </div>
         </section>
 
-        <!-- Formación -->
-        <section class="bloque">
+        <!-- FORMACIÓN -->
+        <section id="formacion" class="seccion">
+            <span class="eyebrow">Estudios</span>
             <h2>Formación Académica</h2>
-            <article class="item">
-                <div class="item-cabecera">
+            <div class="grid-2">
+                <div class="card">
                     <h3>Técnico en Sistemas Microinformáticos y Redes</h3>
-                    <span>2024 - Actualidad</span>
+                    <span class="meta">IES SERPIS · 2024 - Actualidad (2º año)</span>
+                    <p>Administración de sistemas operativos, servicios en red, seguridad informática, montaje de equipos y aplicaciones web.</p>
+                    <span class="badge-estado">Cursando</span>
                 </div>
-                <p class="subtexto">IES SERPIS (Cursando 2º año)</p>
-            </article>
-            <article class="item">
-                <div class="item-cabecera">
-                    <h3>Educación Secundaria Obligatoria</h3>
-                    <span>Finalizado</span>
+                <div class="card">
+                    <h3>Educación Secundaria Obligatoria (ESO)</h3>
+                    <span class="meta">San José de Calasanz</span>
+                    <p>Formación académica general completada.</p>
+                    <span class="badge-estado">Completado</span>
                 </div>
-                <p class="subtexto">San José de Calasanz</p>
-            </article>
-        </section>
-
-        <!-- Proyectos y Competencias -->
-        <section class="bloque">
-            <h2>Proyectos y Competencias Técnicas</h2>
-            <article class="item">
-                <h3>Sistemas y Virtualización</h3>
-                <p class="subtexto">Entornos virtualizados con VirtualBox y contenedores Incus. Administración de Windows Server y Ubuntu Server (usuarios, grupos y permisos).</p>
-            </article>
-            <article class="item">
-                <h3>Redes y Servicios</h3>
-                <p class="subtexto">Despliegue de servicios DHCP, cableado estructurado, crimpado de cables y comandos básicos de Windows y Linux.</p>
-            </article>
-            <article class="item">
-                <h3>Desarrollo y Hardware</h3>
-                <p class="subtexto">Montaje y desmontaje de ordenadores, bases de HTML y CSS, y automatización básica con PowerShell y Python.</p>
-            </article>
-        </section>
-
-        <!-- Idiomas y Habilidades -->
-        <section class="bloque dos-columnas">
-            <div>
-                <h2>Idiomas</h2>
-                <ul>
-                    <li><strong>Castellano:</strong> Nativo</li>
-                    <li><strong>Valenciano:</strong> Nativo</li>
-                    <li><strong>Inglés:</strong> Nivel técnico medio</li>
-                </ul>
-            </div>
-            <div>
-                <h2>Habilidades</h2>
-                <ul>
-                    <li>Resolución de incidencias técnicas</li>
-                    <li>Trabajo colaborativo</li>
-                    <li>Concentración y atención al detalle</li>
-                    <li>Adaptabilidad a nuevas herramientas</li>
-                </ul>
             </div>
         </section>
+
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="seccion">
+            <span class="eyebrow">Práctica Técnica</span>
+            <h2>Proyectos Destacados</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>IA-Home (Domótica)</h3>
+                    <p>Diseño conceptual de infraestructura domótica residencial enfocada en automatización y eficiencia energética.</p>
+                </div>
+                <div class="card">
+                    <h3>Entornos Virtualizados</h3>
+                    <p>Despliegue y gestión de máquinas virtuales con VirtualBox y contenedores Incus sobre Ubuntu Server y Windows Server.</p>
+                </div>
+                <div class="card">
+                    <h3>Infraestructura de Red</h3>
+                    <p>Implementación de servidores DHCP, cableado estructurado UTP y despliegue de proxies y túneles (Velocity, Playit).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- STACK TECNOLÓGICO -->
+        <section id="stack" class="seccion">
+            <span class="eyebrow">Capacidades</span>
+            <h2>Stack Tecnológico</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Sistemas Operativos</h3>
+                    <div class="pills-wrap">
+                        <span class="pill">Ubuntu Server</span>
+                        <span class="pill">Windows Server</span>
+                        <span class="pill">Windows 10/11</span>
+                        <span class="pill">Usuarios y Permisos</span>
+                        <span class="pill">Comandos CLI</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Redes y Hardware</h3>
+                    <div class="pills-wrap">
+                        <span class="pill">Servidor DHCP</span>
+                        <span class="pill">Crimpado UTP</span>
+                        <span class="pill">Redes Locales</span>
+                        <span class="pill">Montaje de PCs</span>
+                        <span class="pill">Mantenimiento HW</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Virtualización y Código</h3>
+                    <div class="pills-wrap">
+                        <span class="pill">VirtualBox</span>
+                        <span class="pill">Incus</span>
+                        <span class="pill">HTML5 & CSS3</span>
+                        <span class="pill">PowerShell</span>
+                        <span class="pill">Python</span>
+                        <span class="pill">GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="seccion" style="margin-bottom: 0;">
+            <span class="eyebrow">Contacto Directo</span>
+            <h2>¿Hablamos?</h2>
+            <div class="card">
+                <div class="botones" style="margin-bottom: 0;">
+                    <a href="mailto:llusepy7@gmail.com" class="btn btn-verde">✉️ llusepy7@gmail.com</a>
+                    <a href="tel:619110881" class="btn btn-oscuro">📞 619 11 08 81</a>
+                    <a href="https://github.com/llusepy7-code" target="_blank" class="btn btn-oscuro">🔗 github.com/llusepy7-code</a>
+                    <span class="btn btn-oscuro">📍 Valencia, España</span>
+                </div>
+            </div>
+        </section>
+
     </main>
+
 </body>
 </html>
