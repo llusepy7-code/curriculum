@@ -200,7 +200,7 @@ h1 span {
     color: #94a3b8;
 }
 
-/* Foto encuadrada sin tapar */
+/* Foto encuadrada */
 .foto-wrapper {
     border-radius: 14px;
     overflow: hidden;
@@ -363,9 +363,11 @@ h1 span {
     border-radius: 9px;
 }
 
-/* Bloque Contacto estilo Pablo */
+/* Bloque Contacto centrado */
 .contacto-card {
     padding: 44px;
+    max-width: 720px;
+    margin: 0 auto;
 }
 
 .contacto-header {
@@ -385,9 +387,9 @@ h1 span {
 
 .contacto-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-    align-items: start;
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
 }
 
 .contacto-lista {
@@ -414,54 +416,6 @@ a.contacto-item:hover {
     border-color: #34d399;
 }
 
-.contacto-form {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.input-campo {
-    width: 100%;
-    background: rgba(8, 17, 26, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 12px;
-    padding: 14px 16px;
-    color: #ffffff;
-    font-family: inherit;
-    font-size: 15px;
-    outline: none;
-    transition: border-color 0.2s;
-}
-
-.input-campo::placeholder {
-    color: #64748b;
-}
-
-.input-campo:focus {
-    border-color: #34d399;
-}
-
-.btn-enviar {
-    width: 100%;
-    background-color: #34d399;
-    color: #050b11;
-    border: none;
-    border-radius: 12px;
-    padding: 15px;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    transition: background-color 0.2s;
-}
-
-.btn-enviar:hover {
-    background-color: #6ee7b7;
-}
-
 .footer {
     text-align: center;
     padding: 28px 20px;
@@ -473,8 +427,7 @@ a.contacto-item:hover {
 @media (max-width: 860px) {
     .hero-grid,
     .grid-2,
-    .grid-3,
-    .contacto-grid {
+    .grid-3 {
         grid-template-columns: 1fr;
     }
     .nav-links {
