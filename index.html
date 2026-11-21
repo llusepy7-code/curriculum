@@ -3,70 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Luis Martin | Técnico IT</title>
+    <title>Jose Luis Martin | CV</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <header class="hero">
-        <div class="hero-contenido">
-            <img src="mifoto1.png" alt="Jose Luis Martin" class="foto-perfil">
-            <div>
+    <main class="cv-hoja">
+        <!-- Cabecera -->
+        <header class="cabecera">
+            <img src="mifoto1.png" alt="Jose Luis Martin" class="foto">
+            <div class="datos-principales">
                 <h1>Jose Luis Martin</h1>
-                <p class="subtitulo">Técnico Informático · SMR</p>
-                <p class="bio">Estudiante de Sistemas Microinformáticos y Redes con perfil resolutivo y orientado a resultados. Busco aplicar mis conocimientos en administración de sistemas, redes y hardware.</p>
-                <div class="botones-contacto">
-                    <a href="mailto:josmarlla@alu.edu.gva.es" class="btn btn-primario">✉️ josmarlla@alu.edu.gva.es</a>
-                    <a href="tel:619110881" class="btn btn-secundario">📞 619 11 08 81</a>
-                    <a href="https://github.com/llusepy7-code" target="_blank" class="btn btn-secundario">🔗 GitHub</a>
-                </div>
+                <p class="puesto">Técnico en Sistemas Microinformáticos y Redes</p>
+                <p class="resumen">Estudiante de 2º de SMR con perfil resolutivo, enfocado en administración de sistemas, redes y mantenimiento de hardware.</p>
+                <ul class="contacto-lista">
+                    <li><strong>Correo:</strong> llusepy7@gmail.com</li>
+                    <li><strong>Teléfono:</strong> 619 11 08 81</li>
+                    <li><strong>Ubicación:</strong> Valencia, España</li>
+                    <li><strong>GitHub:</strong> github.com/llusepy7-code</li>
+                </ul>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <main class="contenedor">
-
-        <section class="seccion">
+        <!-- Experiencia Práctica -->
+        <section class="bloque">
             <h2>Experiencia Práctica</h2>
-            <div class="card">
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
-                    <h3 style="margin: 0;">Prácticas Académicas - Técnico en Microinformática</h3>
-                    <span class="tag" style="background-color: #e0f2fe; color: #0369a1;">Mayo 2026 - Junio 2026 (100 horas)</span>
+            <article class="item">
+                <div class="item-cabecera">
+                    <h3>Prácticas Académicas - Técnico en Microinformática</h3>
+                    <span>Mayo 2026 - Junio 2026 (100h)</span>
                 </div>
-                <ul style="margin-left: 20px; color: #475569; font-size: 14px; line-height: 1.8;">
+                <ul>
                     <li>Soporte técnico y resolución de incidencias.</li>
                     <li>Montaje y mantenimiento de hardware (PCs y periféricos).</li>
                     <li>Digitalización de una biblioteca.</li>
                     <li>Resolución de problemas en Windows y Linux.</li>
                 </ul>
-            </div>
+            </article>
         </section>
 
-        <section class="seccion">
-            <h2>Experiencia y Proyectos Técnicos</h2>
-            <div class="grid-proyectos">
-                <div class="card">
-                    <h3>Administración de Sistemas Operativos</h3>
-                    <p>Implementación y gestión de entornos virtualizados mediante VirtualBox y contenedores Incus. Administración de Windows Server y Ubuntu Server, incluyendo gestión de usuarios, grupos y permisos.</p>
+        <!-- Formación -->
+        <section class="bloque">
+            <h2>Formación Académica</h2>
+            <article class="item">
+                <div class="item-cabecera">
+                    <h3>Técnico en Sistemas Microinformáticos y Redes</h3>
+                    <span>2024 - Actualidad</span>
                 </div>
-                <div class="card">
-                    <h3>Configuración de Redes y Servicios</h3>
-                    <p>Despliegue de servicios de red críticos DHCP, cableado estructurado, crimpado UTP, direccionamiento IP y gestión de conectividad local.</p>
+                <p class="subtexto">IES SERPIS (Cursando 2º año)</p>
+            </article>
+            <article class="item">
+                <div class="item-cabecera">
+                    <h3>Educación Secundaria Obligatoria</h3>
+                    <span>Finalizado</span>
                 </div>
-                <div class="card">
-                    <h3>Desarrollo y Scripting</h3>
-                    <p>Maquetación y estructuración de páginas web mediante HTML y CSS. Automatización de tareas básicas mediante PowerShell y Python.</p>
-                </div>
-            </div>
+                <p class="subtexto">San José de Calasanz</p>
+            </article>
         </section>
 
-        <section class="seccion">
-            <h2>Destrezas y Competencias</h2>
-            <div class="etiquetas">
-                <span class="tag">Montar y desmontar ordenadores</span>
-                <span class="tag">Montar un DHCP</span>
-                <span class="tag">Crimpar cables</span>
-                <span class="tag">Comandos básicos de Windows y Linux</span>
-                <span class="tag">Hardware & Mantenimiento</span>
-                <span class="tag">VirtualBox / Incus</span>
-                <span class="
+        <!-- Proyectos y Competencias -->
+        <section class="bloque">
+            <h2>Proyectos y Competencias Técnicas</h2>
+            <article class="item">
+                <h3>Sistemas y Virtualización</h3>
+                <p class="subtexto">Entornos virtualizados con VirtualBox y contenedores Incus. Administración de Windows Server y Ubuntu Server (usuarios, grupos y permisos).</p>
+            </article>
+            <article class="item">
+                <h3>Redes y Servicios</h3>
+                <p class="subtexto">Despliegue de servicios DHCP, cableado estructurado, crimpado de cables y comandos básicos de Windows y Linux.</p>
+            </article>
+            <article class="item">
+                <h3>Desarrollo y Hardware</h3>
+                <p class="subtexto">Montaje y desmontaje de ordenadores, bases de HTML y CSS, y automatización básica con PowerShell y Python.</p>
+            </article>
+        </section>
+
+        <!-- Idiomas y Habilidades -->
+        <section class="bloque dos-columnas">
+            <div>
+                <h2>Idiomas</h2>
+                <ul>
+                    <li><strong>Castellano:</strong> Nativo</li>
+                    <li><strong>Valenciano:</strong> Nativo</li>
+                    <li><strong>Inglés:</strong> Nivel técnico medio</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>Resolución de incidencias técnicas</li>
+                    <li>Trabajo colaborativo</li>
+                    <li>Concentración y atención al detalle</li>
+                    <li>Adaptabilidad a nuevas herramientas</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
