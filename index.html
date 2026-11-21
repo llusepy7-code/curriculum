@@ -259,5 +259,18 @@
         <p>© 2026 Jose Luis Martin · Técnico SMR | Infraestructura IT</p>
     </footer>
 
+    <!-- Desplazamiento suave sin cambiar la URL -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(enlace => {
+            enlace.addEventListener('click', function (e) {
+                const destino = document.querySelector(this.getAttribute('href'));
+                if (destino) {
+                    e.preventDefault();
+                    destino.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
