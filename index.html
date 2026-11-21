@@ -2,58 +2,88 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>CV Jose Luis Martin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Luis Martin | Técnico IT</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="columna-izquierda">
-        <img src="mifoto1.png" alt="Mi foto">
+
+    <!-- Cabecera Principal -->
+    <header class="hero">
+        <div class="hero-contenido">
+            <img src="mifoto.png" alt="Jose Luis Martin" class="foto-perfil">
+            <div>
+                <h1>Jose Luis Martin</h1>
+                <p class="subtitulo">Técnico en Sistemas Microinformáticos y Redes</p>
+                <p class="bio">Estudiante de 2º de SMR en Valencia. Especializado en administración de sistemas Linux/Windows, despliegue de redes y virtualización.</p>
+                <div class="botones-contacto">
+                    <a href="mailto:josmarlla@alu.edu.gva.es" class="btn btn-primario">✉️ Contactar</a>
+                    <a href="https://github.com/llusepy7-code" target="_blank" class="btn btn-secundario">🔗 GitHub</a>
+                    <a href="tel:619110881" class="btn btn-secundario">📞 619 11 08 81</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="contenedor">
         
-        <!-- Nombre y profesión a la izquierda como en Canva -->
-        <h1 style="text-align: center; color: white; margin-bottom: 5px; font-size: 28px;">Jose Luis Martin</h1>
-        <p style="text-align: center; color: #a0b2c6; margin-top: 0; margin-bottom: 30px; font-size: 14px; text-transform: uppercase;">Técnico Informático</p>
-        
-        <h3>PERFIL</h3>
-        <p>Estudiante de Sistemas Microinformáticos y Redes con perfil resolutivo y orientado a resultados. Busco aplicar mis conocimientos en administración de sistemas, redes y hardware.</p>
+        <!-- Tecnologías -->
+        <section class="seccion">
+            <h2>Stack Tecnológico y Competencias</h2>
+            <div class="etiquetas">
+                <span class="tag">Ubuntu Server</span>
+                <span class="tag">Windows Server</span>
+                <span class="tag">VirtualBox / Incus</span>
+                <span class="tag">Redes & DHCP</span>
+                <span class="tag">OpenSSH</span>
+                <span class="tag">PowerShell</span>
+                <span class="tag">Python</span>
+                <span class="tag">HTML5 & CSS3</span>
+                <span class="tag">Hardware & Mantenimiento</span>
+            </div>
+        </section>
 
-        <h3>IDIOMAS</h3>
-        <p>· Castellano</p>
-        <p>· Valenciano</p>
-        <p>· Inglés (Técnico medio)</p>
+        <!-- Proyectos en Tarjetas -->
+        <section class="seccion">
+            <h2>Proyectos Técnicos</h2>
+            <div class="grid-proyectos">
+                <div class="card">
+                    <h3>IA-Home (Domótica)</h3>
+                    <p>Diseño y planificación de infraestructura domótica residencial enfocada en automatización y eficiencia energética.</p>
+                </div>
+                <div class="card">
+                    <h3>Administración de Sistemas</h3>
+                    <p>Despliegue de entornos virtualizados (VirtualBox/Incus) y gestión de usuarios, grupos y permisos ACL NTFS en Windows y Linux.</p>
+                </div>
+                <div class="card">
+                    <h3>Infraestructura de Red</h3>
+                    <p>Implementación de servicios DHCP, cableado estructurado UTP y configuración de proxies/túneles (Velocity, Playit).</p>
+                </div>
+            </div>
+        </section>
 
-        <h3>HABILIDADES BÁSICAS</h3>
-        <p>· Capacidad de resolución de incidentes técnicos.</p>
-        <p>· Trabajo colaborativo en despliegue de proyectos.</p>
-        <p>· Alto nivel de concentración y atención al detalle.</p>
-        <p>· Adaptabilidad a nuevas herramientas y protocolos.</p>
+        <!-- Formación e Idiomas en dos columnas -->
+        <section class="seccion grid-dos">
+            <div class="card">
+                <h2>Formación Académica</h2>
+                <p><strong>Técnico en Sistemas Microinformáticos y Redes</strong><br>
+                IES SERPIS (2024 - 2026 | Cursando 2º año)</p>
+                <br>
+                <p><strong>Educación Secundaria Obligatoria</strong><br>
+                San José de Calasanz</p>
+            </div>
+            <div class="card">
+                <h2>Idiomas y Perfil</h2>
+                <p><strong>Castellano:</strong> Nativo</p>
+                <p><strong>Valenciano:</strong> Nativo</p>
+                <p><strong>Inglés:</strong> Técnico medio</p>
+                <hr>
+                <p>Resolución de incidencias, trabajo colaborativo y alta adaptabilidad a nuevos entornos.</p>
+            </div>
+        </section>
 
-        <h3>CONTACTO</h3>
-        <p>Correo: llusepy7@gmail.com</p>
-        <p>Telefono: 619 11 08 81</p>
-        <p>Valencia, España</p>
-    </div>
+    </main>
 
-    <div class="columna-derecha">
-        <h3>EXPERIENCIA Y PROYECTOS</h3>
-       
-        <p class="titulo-azul">Administración de Sistemas Operativos</p>
-        <p>· Implementación y gestión de entornos virtualizados mediante VirtualBox y contenedores Incus.</p>
-        <p>· Administración de Windows Server y Ubuntu Server, incluyendo gestión de usuarios, grupos y permisos.</p>
-        <br>
-        <p class="titulo-azul">Configuración de Redes y Servicios</p>
-        <p>· Despliegue de servicios de red críticos DHCP.</p>
-        
-        <h3>COMPETENCIAS TÉCNICAS</h3>
-        <p>· <b>Hardware:</b> Ensamblaje, mantenimiento preventivo y diagnóstico de equipos microinformáticos.</p>
-        <p>· <b>Redes:</b> Cableado estructurado, crimpado UTP, direccionamiento IP y gestión de conectividad local.</p>
-        <p>· <b>Desarrollo Web:</b> Maquetación y estructuración de páginas mediante HTML y CSS.</p>
-        <p>· <b>Scripting:</b> Automatización de tareas básicas mediante PowerShell y Python.</p>
-
-        <h3>FORMACIÓN ACADÉMICA</h3>
-        <p class="titulo-azul">Técnico en Sistemas Microinformáticos y Redes</p>
-        <p>IES SERPIS (actualmente cursando 2º año)</p>
-        <br>
-        
-    </div>
 </body>
 </html>
